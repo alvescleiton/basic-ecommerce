@@ -1,4 +1,4 @@
-## Default React + Next.js + Typescript + Styled Components project structure
+## Basic E-commerce
 ---
 
 ## Tools
@@ -10,7 +10,7 @@
 ## Clone and Run
 ```bash
 # clone the project
-git clone https://github.com/alvescleiton/react-nextjs-typescript-structure.git
+git clone https://github.com/alvescleiton/basic-ecommerce.git
 ```
 
 ```bash
