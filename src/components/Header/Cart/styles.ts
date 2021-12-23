@@ -11,15 +11,15 @@ export const CartContainer = styled.div`
 
 export const NumberOfItems = styled.div`
   position: absolute;
-  right: -10px;
-  top: -10px;
+  right: -8px;
+  top: -8px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #333;
   color: #fff;
-  width: 20px;
-  height: 20px;
-  font-size: 12px;
+  width: 17px;
+  height: 17px;
+  font-size: 10px;
   border-radius: 50%;
 `
