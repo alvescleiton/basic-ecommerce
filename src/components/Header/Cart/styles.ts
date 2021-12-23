@@ -16,10 +16,10 @@ export const NumberOfItems = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #333;
-  color: #fff;
+  background: ${props => props.theme.colors.grayDark};
+  color: ${props => props.theme.colors.white};
   width: 17px;
   height: 17px;
-  font-size: 10px;
+  font-size: ${props => props.theme.fontSize.extraSmall};
   border-radius: 50%;
 `
