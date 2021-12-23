@@ -7,7 +7,7 @@ export const Background = styled.div`
 
 export const Logo = styled.div`
   display: flex;
-  width: 160px;
+  width: 140px;
   padding: 10px 0;
 
   img {
