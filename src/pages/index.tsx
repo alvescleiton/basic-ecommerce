@@ -1,17 +1,15 @@
 import React from 'react'
 
 import { NextPage } from 'next'
-import Head from 'next/head'
+
+import Container from '@/Components/Container'
+import Product from '@/Components/Product'
 
 const Home: NextPage = () => {
   return (
-    <>
-      <Head>
-        <title>Home</title>
-      </Head>
-
-      <h1>Default Next.js Project</h1>
-    </>
+    <Container>
+      <Product />
+    </Container>
   )
 }
 
