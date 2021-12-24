@@ -2,14 +2,15 @@ import React from 'react'
 
 import Link from 'next/link'
 
-import { ContainerLogo } from './styles'
+import { ContainerLogo, Circle, Title } from './styles'
 
 const Logo = () => {
   return (
     <Link href="/">
       <a>
         <ContainerLogo>
-          <strong>DEV</strong> <span>STORE</span>
+          <Circle>DS</Circle>
+          <Title>Dev Store</Title>
         </ContainerLogo>
       </a>
     </Link>

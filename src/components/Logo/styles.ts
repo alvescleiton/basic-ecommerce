@@ -1,6 +1,17 @@
 import styled from 'styled-components'
 
 export const ContainerLogo = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.25s all ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+`
+
+export const Circle = styled.div`
   position: relative;
   display: flex;
   align-items: center;
@@ -8,25 +19,12 @@ export const ContainerLogo = styled.div`
   flex-direction: column;
   text-align: center;
   margin: 5px 0;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border: 1px solid ${props => props.theme.colors.grayDark};
   border-radius: 50%;
-  font-size: ${props => props.theme.fontSize.extraSmall};
+  font-size: ${props => props.theme.fontSize.small};
   cursor: pointer;
-  transition: 0.25s all ease;
-
-  &:hover {
-    opacity: 0.7;
-  }
-
-  strong {
-    color: ${props => props.theme.colors.primary};
-  }
-
-  span {
-    color: ${props => props.theme.colors.grayMedium};
-  }
 
   &:before {
     content: '';
@@ -39,4 +37,10 @@ export const ContainerLogo = styled.div`
     border-radius: 50%;
     opacity: 0.3;
   }
+`
+
+export const Title = styled.div`
+  margin-left: 10px;
+  font-size: ${props => props.theme.fontSize.large};
+  color: ${props => props.theme.colors.primary};
 `
