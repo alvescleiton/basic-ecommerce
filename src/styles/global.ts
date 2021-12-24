@@ -12,4 +12,8 @@ export default createGlobalStyle`
     color: ${props => props.theme.colors.text};
     font: 400 16px Roboto, sans-serif;
   }
+
+  a, a:hover, a:active {
+    text-decoration: none;
+  }
 `

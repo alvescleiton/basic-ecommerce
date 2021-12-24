@@ -7,9 +7,11 @@ import { ContainerLogo } from './styles'
 const Logo = () => {
   return (
     <Link href="/">
-      <ContainerLogo>
-        <strong>DEV</strong> <span>STORE</span>
-      </ContainerLogo>
+      <a>
+        <ContainerLogo>
+          <strong>DEV</strong> <span>STORE</span>
+        </ContainerLogo>
+      </a>
     </Link>
   )
 }

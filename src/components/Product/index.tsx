@@ -20,8 +20,8 @@ const Product = () => {
         </Container>
         <Container display="flex" justifyContent="space-between">
           <Price>
-            <sup>$150</sup>
             <strong>$100</strong>
+            <sup>$150</sup>
           </Price>
           <Cart>add to cart +</Cart>
         </Container>
