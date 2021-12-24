@@ -1,8 +1,8 @@
 import React from 'react'
 
+import Cart from '@/Components/Cart'
 import Container from '@/Components/Container'
-import Cart from '@/Components/Header/Cart'
-import Logo from '@/Components/Header/Logo'
+import Logo from '@/Components/Logo'
 
 import { Background } from './styles'
 
