@@ -1,12 +1,27 @@
-import rgba from 'polished/lib/color/rgba'
 import styled from 'styled-components'
+
+import rgba from 'polished/lib/color/rgba'
+import breakpoints from 'src/utils/breakpoints'
 
 export const ProductContainer = styled.div`
   background: ${props => props.theme.colors.white};
   border-radius: 8px;
   box-shadow: 2px 2px 5px ${props => rgba(`${props.theme.colors.black}`, 0.1)};
-  max-width: 320px;
+  flex: 1 1 auto;
   transition: 0.25s all ease;
+
+  @media ${breakpoints.tabletSmall} {
+    max-width: 356px;
+  }
+
+  @media ${breakpoints.tablet} {
+    flex: 1 1 auto;
+    max-width: 296px;
+  }
+
+  @media ${breakpoints.desktop} {
+    max-width: 278px;
+  }
 
   &:hover {
     box-shadow: 2px 2px 10px ${props => rgba(`${props.theme.colors.black}`, 0.2)};
