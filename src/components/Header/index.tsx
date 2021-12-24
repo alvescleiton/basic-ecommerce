@@ -2,16 +2,15 @@ import React from 'react'
 
 import Container from '@/Components/Container'
 import Cart from '@/Components/Header/Cart'
+import Logo from '@/Components/Header/Logo'
 
-import { Background, Logo } from './styles'
+import { Background } from './styles'
 
 const Header = () => {
   return (
     <Background>
       <Container display="flex" justifyContent="space-between" alignItems="center">
-        <Logo>
-          <img src="/assets/img/logo.png" alt="Dev Store" />
-        </Logo>
+        <Logo />
 
         <Cart />
       </Container>
