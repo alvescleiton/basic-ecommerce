@@ -57,12 +57,12 @@
         "groups": [
           "/^react/",
           "/^next/",
+          "/^styled-components/",
           "module",
           "/^Hooks/",
           "/^Services/",
           "/^Components/",
           "/^./styles/",
-          "/^@shared/",
           [
             "parent",
             "sibling",
