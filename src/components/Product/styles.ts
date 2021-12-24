@@ -8,6 +8,7 @@ export const ProductContainer = styled.div`
   border-radius: 8px;
   box-shadow: 2px 2px 5px ${props => rgba(`${props.theme.colors.black}`, 0.1)};
   flex: 1 1 auto;
+  margin: 5px 0;
   transition: 0.25s all ease;
 
   @media ${breakpoints.tabletSmall} {
@@ -68,7 +69,7 @@ export const Price = styled.div`
     margin-left: 7px;
     text-decoration: line-through;
     color: ${props => props.theme.colors.grayLight};
-    font-size: ${props => props.theme.fontSize.medium};
+    font-size: ${props => props.theme.fontSize.small};
   }
 
   strong {
