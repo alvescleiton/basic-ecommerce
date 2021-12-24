@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components'
 
+import breakpoints from 'src/utils/breakpoints'
+
 type Props = {
   display?: string
   justifyContent?: string
@@ -9,9 +11,24 @@ type Props = {
 
 export const Element = styled.div<Props>`
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+
+  @media ${breakpoints.mobile} {
+    max-width: 480px;
+  }
+
+  @media ${breakpoints.tabletSmall} {
+    max-width: 768px;
+  }
+
+  @media ${breakpoints.tablet} {
+    max-width: 960px;
+  }
+
+  @media ${breakpoints.desktop} {
+    max-width: 1200px;
+  }
 
   ${props =>
     props.display &&
