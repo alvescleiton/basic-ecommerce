@@ -48,7 +48,7 @@ export const Details = styled.div`
 
 export const Title = styled.h2`
   text-align: center;
-  font-size: ${props => props.theme.fontSize.default};
+  font-size: ${props => props.theme.fontSize.large};
   margin-bottom: 10px;
   color: ${props => props.theme.colors.primary};
 `
@@ -65,7 +65,7 @@ export const Price = styled.div`
   align-items: flex-start;
 
   sup {
-    margin-top: 2px;
+    margin-top: 4px;
     margin-left: 7px;
     text-decoration: line-through;
     color: ${props => props.theme.colors.grayLight};
@@ -73,10 +73,12 @@ export const Price = styled.div`
   }
 
   strong {
-    font-size: ${props => props.theme.fontSize.extraLarge};
-
     @media ${breakpoints.tabletSmall} {
       font-size: ${props => props.theme.fontSize.large};
+    }
+
+    @media ${breakpoints.tablet} {
+      font-size: ${props => props.theme.fontSize.extraLarge};
     }
   }
 `
