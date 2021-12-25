@@ -48,13 +48,13 @@ export const Details = styled.div`
 
 export const Title = styled.h2`
   text-align: center;
-  font-size: ${props => props.theme.fontSize.large};
+  font-size: ${props => props.theme.fontSizes.large};
   margin-bottom: 10px;
   color: ${props => props.theme.colors.primary};
 `
 
 export const Description = styled.p`
-  font-size: ${props => props.theme.fontSize.small};
+  font-size: ${props => props.theme.fontSizes.small};
   line-height: 18px;
   color: ${props => props.theme.colors.grayMedium};
   margin-bottom: 20px;
@@ -69,16 +69,16 @@ export const Price = styled.div`
     margin-left: 7px;
     text-decoration: line-through;
     color: ${props => props.theme.colors.grayLight};
-    font-size: ${props => props.theme.fontSize.small};
+    font-size: ${props => props.theme.fontSizes.small};
   }
 
   strong {
     @media ${breakpoints.tabletSmall} {
-      font-size: ${props => props.theme.fontSize.large};
+      font-size: ${props => props.theme.fontSizes.large};
     }
 
     @media ${breakpoints.tablet} {
-      font-size: ${props => props.theme.fontSize.extraLarge};
+      font-size: ${props => props.theme.fontSizes.extraLarge};
     }
   }
 `
@@ -86,7 +86,7 @@ export const Price = styled.div`
 export const Cart = styled.button`
   position: relative;
   padding: 5px;
-  font-size: ${props => props.theme.fontSize.small};
+  font-size: ${props => props.theme.fontSizes.small};
   background: ${props => props.theme.colors.primary};
   color: ${props => props.theme.colors.white};
   border: 0;
@@ -96,7 +96,7 @@ export const Cart = styled.button`
   transition: 0.25s all ease;
 
   @media ${breakpoints.tabletSmall} {
-    font-size: ${props => props.theme.fontSize.extraSmall};
+    font-size: ${props => props.theme.fontSizes.extraSmall};
   }
 
   &:hover {

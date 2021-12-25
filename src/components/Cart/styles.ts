@@ -20,6 +20,6 @@ export const NumberOfItems = styled.div`
   color: ${props => props.theme.colors.white};
   width: 17px;
   height: 17px;
-  font-size: ${props => props.theme.fontSize.extraSmall};
+  font-size: ${props => props.theme.fontSizes.extraSmall};
   border-radius: 50%;
 `

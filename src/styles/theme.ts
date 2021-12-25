@@ -10,7 +10,7 @@ const theme = {
     grayExtraLight: '#eaeaea',
     primary: '#b53575',
   },
-  fontSize: {
+  fontSizes: {
     extraSmall: '0.6250rem',
     small: '0.75rem',
     medium: '0.8750rem',

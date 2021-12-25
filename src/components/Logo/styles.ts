@@ -23,7 +23,7 @@ export const Circle = styled.div`
   height: 40px;
   border: 1px solid ${props => props.theme.colors.grayDark};
   border-radius: 50%;
-  font-size: ${props => props.theme.fontSize.small};
+  font-size: ${props => props.theme.fontSizes.small};
   cursor: pointer;
 
   &:before {
@@ -41,6 +41,6 @@ export const Circle = styled.div`
 
 export const Title = styled.div`
   margin-left: 10px;
-  font-size: ${props => props.theme.fontSize.large};
+  font-size: ${props => props.theme.fontSizes.large};
   color: ${props => props.theme.colors.primary};
 `
