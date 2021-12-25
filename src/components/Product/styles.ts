@@ -73,13 +73,7 @@ export const Price = styled.div`
   }
 
   strong {
-    @media ${breakpoints.tabletSmall} {
-      font-size: ${props => props.theme.fontSizes.large};
-    }
-
-    @media ${breakpoints.tablet} {
-      font-size: ${props => props.theme.fontSizes.extraLarge};
-    }
+    font-size: ${props => props.theme.fontSizes.extraLarge};
   }
 `
 
