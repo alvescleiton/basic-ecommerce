@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { CartContainer, NumberOfItems } from './styles'
 
 const Cart = () => {

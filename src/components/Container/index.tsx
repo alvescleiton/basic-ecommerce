@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { Element } from './styles'
 
 type Props = {

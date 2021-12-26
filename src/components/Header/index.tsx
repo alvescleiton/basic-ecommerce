@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Cart from '@/Components/Cart'
 import Container from '@/Components/Container'
 import Logo from '@/Components/Logo'

@@ -1,10 +1,8 @@
-import React from 'react'
-
 import { Cart, Description, Details, Image, Price, ProductContainer, Title } from './styles'
 
 import Container from '../Container'
 
-type ProductType = {
+export type ProductType = {
   id: number
   title: string
   description: string
