@@ -36,3 +36,9 @@ export const Table = styled.table`
     }
   }
 `
+
+export const NoItems = styled.p`
+  display: block;
+  text-align: center;
+  padding: 30px 10px;
+`

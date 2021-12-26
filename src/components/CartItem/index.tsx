@@ -1,18 +1,28 @@
+import { useContext } from 'react'
+
+import { CartContext, CartProductsType } from '@/Hooks/CartHooks'
+
 import { ContainerCartItem, ProductImage, Title, Quantity, Price, Remove } from './styles'
 
-const CartItem = () => {
+type Props = {
+  product: CartProductsType
+}
+
+const CartItem = ({ product }: Props) => {
+  const { removeProduct } = useContext(CartContext)
+
   const handleRemoveButton = () => {
-    console.log('remove')
+    removeProduct(product.id)
   }
 
   return (
     <ContainerCartItem>
       <ProductImage>
-        <img src="/assets/img/product.jpg" alt="Product" />
+        <img src="/assets/img/product.jpg" alt={product.title} />
       </ProductImage>
-      <Title>Notebook 1</Title>
-      <Quantity>1</Quantity>
-      <Price>$5,000</Price>
+      <Title>{product.title}</Title>
+      <Quantity>{product.quantity}</Quantity>
+      <Price>${product.priceDiscount > 0 ? product.priceDiscount : product.price}</Price>
       <Remove>
         <button onClick={handleRemoveButton}>X</button>
       </Remove>

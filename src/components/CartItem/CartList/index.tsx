@@ -1,8 +1,28 @@
-import CartItem from '@/Components/CartItem'
+import { useContext, useEffect, useState } from 'react'
 
-import { Table } from './styles'
+import CartItem from '@/Components/CartItem'
+import { CartContext } from '@/Hooks/CartHooks'
+
+import { Table, NoItems } from './styles'
 
 const CartList = () => {
+  const { products } = useContext(CartContext)
+  const [total, setTotal] = useState(0)
+
+  useEffect(() => {
+    const total = products.reduce((acc, product) => {
+      const price = product.priceDiscount ? product.priceDiscount : product.price
+
+      return acc + price * product.quantity
+    }, 0)
+
+    setTotal(total)
+  }, [products])
+
+  if (!products.length) {
+    return <NoItems>Your cart is empty</NoItems>
+  }
+
   return (
     <Table>
       <thead>
@@ -16,13 +36,12 @@ const CartList = () => {
         </tr>
       </thead>
       <tbody>
-        <CartItem />
-        <CartItem />
-        <CartItem />
-        <CartItem />
+        {products.map(product => (
+          <CartItem key={product.id} product={product} />
+        ))}
         <tr>
           <td colSpan={6} align="right">
-            Total: <strong>$15,000</strong>
+            Total: <strong>${total.toLocaleString('en-US')}</strong>
           </td>
         </tr>
       </tbody>
