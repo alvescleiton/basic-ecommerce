@@ -1,7 +1,11 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import rgba from 'polished/lib/color/rgba'
 import breakpoints from 'src/utils/breakpoints'
+
+type CartProps = {
+  added: boolean
+}
 
 export const ProductContainer = styled.div`
   background: ${props => props.theme.colors.white};
@@ -77,7 +81,7 @@ export const Price = styled.div`
   }
 `
 
-export const Cart = styled.button`
+export const Cart = styled.button<CartProps>`
   position: relative;
   padding: 5px;
   font-size: ${props => props.theme.fontSizes.small};
@@ -89,11 +93,24 @@ export const Cart = styled.button`
   cursor: pointer;
   transition: 0.25s all ease;
 
-  @media ${breakpoints.tabletSmall} {
-    font-size: ${props => props.theme.fontSizes.extraSmall};
-  }
+  ${props =>
+    !props.added &&
+    css`
+      @media ${breakpoints.tabletSmall} {
+        font-size: ${props => props.theme.fontSizes.extraSmall};
+      }
 
-  &:hover {
-    opacity: 0.8;
-  }
+      &:hover {
+        opacity: 0.8;
+      }
+    `}
+
+  ${props =>
+    props.added &&
+    css`
+      background: transparent;
+      color: green;
+      font-size: ${props.theme.fontSizes.small};
+      pointer-events: none;
+    `}
 `

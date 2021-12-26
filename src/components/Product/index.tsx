@@ -1,3 +1,7 @@
+import { useContext, useState } from 'react'
+
+import { CartContext } from '@/Hooks/CartHooks'
+
 import { Cart, Description, Details, Image, Price, ProductContainer, Title } from './styles'
 
 import Container from '../Container'
@@ -15,6 +19,14 @@ type PropsType = {
 }
 
 const Product = ({ product }: PropsType) => {
+  const [added, setAdded] = useState(false)
+  const { addProduct } = useContext(CartContext)
+
+  const addToCart = () => {
+    addProduct(product)
+    setAdded(true)
+  }
+
   return (
     <ProductContainer>
       <Image>
@@ -30,7 +42,9 @@ const Product = ({ product }: PropsType) => {
             <strong>${product.price.toLocaleString('en-US')}</strong>
             {product.priceDiscount > 0 && <sup>${product.priceDiscount.toLocaleString('en-US')}</sup>}
           </Price>
-          <Cart>add to cart +</Cart>
+          <Cart onClick={addToCart} added={added}>
+            {added ? 'in the cart' : 'add to cart +'}
+          </Cart>
         </Container>
       </Details>
     </ProductContainer>
