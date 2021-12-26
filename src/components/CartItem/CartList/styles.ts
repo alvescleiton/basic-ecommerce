@@ -31,6 +31,7 @@ export const Table = styled.table`
 
       &:last-child {
         font-size: ${props => props.theme.fontSizes.default};
+        background: transparent;
         line-height: 40px;
       }
     }
