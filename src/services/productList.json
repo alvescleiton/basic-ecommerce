@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Notebook 1",
+    "description": "This is a notebook description. This is a notebook description",
+    "price": 5000,
+    "priceDiscount": 4000
+  },
+  {
+    "id": 2,
+    "title": "Notebook 2",
+    "description": "This is a notebook description. This is a notebook description",
+    "price": 6500,
+    "priceDiscount": 5500
+  },
+  {
+    "id": 3,
+    "title": "Notebook 3",
+    "description": "This is a notebook description. This is a notebook description",
+    "price": 4200,
+    "priceDiscount": 0
+  },
+  {
+    "id": 4,
+    "title": "Notebook 4",
+    "description": "This is a notebook description. This is a notebook description",
+    "price": 3750,
+    "priceDiscount": 0
+  },
+  {
+    "id": 5,
+    "title": "Notebook 5",
+    "description": "This is a notebook description. This is a notebook description",
+    "price": 8450,
+    "priceDiscount": 6980
+  },
+  {
+    "id": 6,
+    "title": "Notebook 6",
+    "description": "This is a notebook description. This is a notebook description",
+    "price": 4580,
+    "priceDiscount": 0
+  },
+  {
+    "id": 7,
+    "title": "Notebook 7",
+    "description": "This is a notebook description. This is a notebook description",
+    "price": 5850,
+    "priceDiscount": 5600
+  },
+  {
+    "id": 8,
+    "title": "Notebook 8",
+    "description": "This is a notebook description. This is a notebook description",
+    "price": 5600,
+    "priceDiscount": 0
+  }
+]
