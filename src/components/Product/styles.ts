@@ -77,7 +77,7 @@ export const Price = styled.div`
   }
 
   strong {
-    font-size: ${props => props.theme.fontSizes.extraLarge};
+    font-size: ${props => props.theme.fontSizes.large};
   }
 `
 
