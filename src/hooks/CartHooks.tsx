@@ -1,6 +1,6 @@
 import { createContext, useState } from 'react'
 
-import { ProductType } from '@/Components/Product'
+import { ProductType } from '@/Components/ProductItem'
 
 type CartProducts = {
   id: number
@@ -13,6 +13,7 @@ type CartProducts = {
 type CreateContextType = {
   products: CartProducts[]
   addProduct: (product: ProductType) => void
+  removeProduct: (id: number) => void
 }
 
 type CartContextType = {
@@ -40,5 +41,9 @@ export const CartProvider = ({ children }: CartContextType) => {
     setProducts([...products, obj])
   }
 
-  return <CartContext.Provider value={{ products, addProduct }}>{children}</CartContext.Provider>
+  const removeProduct = (id: number) => {
+    setProducts(products.filter(p => p.id !== id))
+  }
+
+  return <CartContext.Provider value={{ products, addProduct, removeProduct }}>{children}</CartContext.Provider>
 }
