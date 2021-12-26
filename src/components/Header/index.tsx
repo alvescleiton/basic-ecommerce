@@ -1,6 +1,6 @@
-import Cart from '@/Components/Cart'
 import Container from '@/Components/Container'
 import Logo from '@/Components/Logo'
+import MiniCart from '@/Components/MiniCart'
 
 import { Background } from './styles'
 
@@ -10,7 +10,7 @@ const Header = () => {
       <Container display="flex" justifyContent="space-between" alignItems="center">
         <Logo />
 
-        <Cart />
+        <MiniCart />
       </Container>
     </Background>
   )

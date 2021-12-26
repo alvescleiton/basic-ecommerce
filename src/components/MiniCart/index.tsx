@@ -1,10 +1,12 @@
 import { useContext, useEffect, useState } from 'react'
 
+import Link from 'next/link'
+
 import { CartContext } from '@/Hooks/CartHooks'
 
 import { CartContainer, NumberOfItems } from './styles'
 
-const Cart = () => {
+const MiniCart = () => {
   const { products } = useContext(CartContext)
   const [quantity, setQuantity] = useState(0)
 
@@ -16,11 +18,15 @@ const Cart = () => {
 
   return (
     <CartContainer>
-      <NumberOfItems>{quantity}</NumberOfItems>
+      <Link href="/cart">
+        <a>
+          <NumberOfItems>{quantity}</NumberOfItems>
 
-      <img src="/assets/img/cart.png" alt="Cart" />
+          <img src="/assets/img/cart.png" alt="Cart" />
+        </a>
+      </Link>
     </CartContainer>
   )
 }
 
-export default Cart
+export default MiniCart

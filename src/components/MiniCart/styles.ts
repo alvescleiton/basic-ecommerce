@@ -4,7 +4,7 @@ export const CartContainer = styled.div`
   position: relative;
   height: 26px;
 
-  > img {
+  img {
     height: 26px;
   }
 `
