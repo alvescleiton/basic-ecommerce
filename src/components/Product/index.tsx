@@ -4,24 +4,33 @@ import { Cart, Description, Details, Image, Price, ProductContainer, Title } fro
 
 import Container from '../Container'
 
-const Product = () => {
+type ProductType = {
+  id: number
+  title: string
+  description: string
+  price: number
+  priceDiscount: number
+}
+
+type PropsType = {
+  product: ProductType
+}
+
+const Product = ({ product }: PropsType) => {
   return (
     <ProductContainer>
       <Image>
-        <img src="/assets/img/product.jpg" alt="Notebook" />
+        <img src="/assets/img/product.jpg" alt={product.title} />
       </Image>
       <Details>
         <Container>
-          <Title>Product Title</Title>
-          <Description>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, molestias nesciunt. Blanditiis quaerat
-            facilis est ad illo.
-          </Description>
+          <Title>{product.title}</Title>
+          <Description>{product.description}</Description>
         </Container>
         <Container display="flex" justifyContent="space-between">
           <Price>
-            <strong>$100</strong>
-            <sup>$150</sup>
+            <strong>${product.price.toLocaleString('en-US')}</strong>
+            {product.priceDiscount > 0 && <sup>${product.priceDiscount.toLocaleString('en-US')}</sup>}
           </Price>
           <Cart>add to cart +</Cart>
         </Container>

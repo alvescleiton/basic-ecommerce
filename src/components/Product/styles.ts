@@ -68,7 +68,7 @@ export const Price = styled.div`
     margin-top: 4px;
     margin-left: 7px;
     text-decoration: line-through;
-    color: ${props => props.theme.colors.grayLight};
+    color: ${props => props.theme.colors.grayMedium};
     font-size: ${props => props.theme.fontSizes.small};
   }
 
