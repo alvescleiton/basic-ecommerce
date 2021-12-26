@@ -18,7 +18,7 @@ type PropsType = {
   product: ProductType
 }
 
-const Product = ({ product }: PropsType) => {
+const ProductItem = ({ product }: PropsType) => {
   const [added, setAdded] = useState(false)
   const { addProduct } = useContext(CartContext)
 
@@ -51,4 +51,4 @@ const Product = ({ product }: PropsType) => {
   )
 }
 
-export default Product
+export default ProductItem

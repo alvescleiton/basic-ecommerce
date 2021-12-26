@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import Product from '..'
+import ProductItem from '..'
 
 import ProductData from '@/Services/productList.json'
 
@@ -24,7 +24,7 @@ const ProductList = () => {
   return (
     <ContainerProductList>
       {productList?.map(product => (
-        <Product key={product.id} product={product} />
+        <ProductItem key={product.id} product={product} />
       ))}
     </ContainerProductList>
   )
