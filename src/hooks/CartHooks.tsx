@@ -2,7 +2,7 @@ import { createContext, useState } from 'react'
 
 import { ProductType } from '@/Components/ProductItem'
 
-type CartProducts = {
+export type CartProductsType = {
   id: number
   title: string
   price: number
@@ -11,7 +11,7 @@ type CartProducts = {
 }
 
 type CreateContextType = {
-  products: CartProducts[]
+  products: CartProductsType[]
   addProduct: (product: ProductType) => void
   removeProduct: (id: number) => void
 }
