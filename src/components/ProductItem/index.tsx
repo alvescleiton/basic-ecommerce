@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 
 import { CartContext } from '@/Hooks/CartHooks'
 
@@ -20,12 +20,15 @@ type PropsType = {
 
 const ProductItem = ({ product }: PropsType) => {
   const [added, setAdded] = useState(false)
-  const { addProduct } = useContext(CartContext)
+  const { addProduct, products } = useContext(CartContext)
 
   const addToCart = () => {
     addProduct(product)
-    setAdded(true)
   }
+
+  useEffect(() => {
+    products.some(p => p.id === product.id) && setAdded(true)
+  }, [products])
 
   return (
     <ProductContainer>
