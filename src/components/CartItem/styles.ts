@@ -40,6 +40,7 @@ export const Remove = styled.td`
   color: ${props => props.theme.colors.primary};
 
   button {
+    cursor: pointer;
     border: 0;
     color: ${props => props.theme.colors.primary};
     background: transparent;
