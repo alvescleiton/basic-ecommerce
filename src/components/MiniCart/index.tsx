@@ -9,15 +9,22 @@ import { CartContainer, NumberOfItems } from './styles'
 const MiniCart = () => {
   const { products } = useContext(CartContext)
   const [quantity, setQuantity] = useState(0)
+  const [isAnimatin, setIsAnimatin] = useState(false)
 
   useEffect(() => {
     const qtd = products.reduce((acc, cur) => acc + cur.quantity, 0)
 
+    setIsAnimatin(true)
+
     setQuantity(qtd)
+
+    setTimeout(() => {
+      setIsAnimatin(false)
+    }, 1000)
   }, [products])
 
   return (
-    <CartContainer>
+    <CartContainer isAnimating={isAnimatin}>
       <Link href="/cart">
         <a>
           <NumberOfItems>{quantity}</NumberOfItems>
