@@ -1,6 +1,8 @@
 {
   "name": "dev-store",
   "version": "0.1.0",
+  "description": "A simple store to study",
+  "author": "Cleiton Alves <dev.cleitonalves@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "next dev",
