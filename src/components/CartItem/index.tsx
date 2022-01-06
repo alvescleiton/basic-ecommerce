@@ -18,7 +18,7 @@ const CartItem = ({ product }: Props) => {
   return (
     <ContainerCartItem>
       <ProductImage>
-        <img src="/assets/img/product.jpg" alt={product.title} />
+        <img src={product.image} alt={product.title} />
       </ProductImage>
       <Title>{product.title}</Title>
       <Quantity>{product.quantity}</Quantity>

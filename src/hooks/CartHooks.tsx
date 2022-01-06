@@ -4,6 +4,7 @@ import { ProductType } from '@/Components/ProductItem'
 
 export type CartProductsType = {
   id: number
+  image: string
   title: string
   price: number
   priceDiscount?: number
@@ -28,6 +29,7 @@ export const CartProvider = ({ children }: CartContextType) => {
   const addProduct = (product: ProductType) => {
     const obj = {
       id: product.id,
+      image: product.image,
       title: product.title,
       price: product.price,
       priceDiscount: product.priceDiscount,

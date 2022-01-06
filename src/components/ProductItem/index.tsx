@@ -8,6 +8,7 @@ import Container from '../Container'
 
 export type ProductType = {
   id: number
+  image: string
   title: string
   description: string
   price: number
@@ -33,7 +34,7 @@ const ProductItem = ({ product }: PropsType) => {
   return (
     <ProductContainer>
       <Image>
-        <img src="/assets/img/product.jpg" alt={product.title} />
+        <img src={product.image} alt={product.title} />
       </Image>
       <Details>
         <Container>
