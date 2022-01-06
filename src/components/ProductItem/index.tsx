@@ -44,11 +44,11 @@ const ProductItem = ({ product }: PropsType) => {
           <Price>
             {product.priceDiscount ? (
               <>
-                <strong>R${product.priceDiscount.toLocaleString('pt-BR')}</strong>
-                <sup>R${product.price.toLocaleString('pt-BR')}</sup>
+                <strong>${product.priceDiscount.toLocaleString('en-US')}</strong>
+                <sup>${product.price.toLocaleString('en-US')}</sup>
               </>
             ) : (
-              <strong>R${product.price.toLocaleString('pt-BR')}</strong>
+              <strong>${product.price.toLocaleString('en-US')}</strong>
             )}
           </Price>
           <Cart onClick={addToCart} added={added}>
