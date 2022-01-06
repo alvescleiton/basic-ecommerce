@@ -42,8 +42,14 @@ const ProductItem = ({ product }: PropsType) => {
         </Container>
         <Container display="flex" justifyContent="space-between">
           <Price>
-            <strong>${product.price.toLocaleString('en-US')}</strong>
-            {product.priceDiscount > 0 && <sup>${product.priceDiscount.toLocaleString('en-US')}</sup>}
+            {product.priceDiscount ? (
+              <>
+                <strong>R${product.priceDiscount.toLocaleString('pt-BR')}</strong>
+                <sup>R${product.price.toLocaleString('pt-BR')}</sup>
+              </>
+            ) : (
+              <strong>R${product.price.toLocaleString('pt-BR')}</strong>
+            )}
           </Price>
           <Cart onClick={addToCart} added={added}>
             {added ? 'in the cart' : 'add to cart +'}

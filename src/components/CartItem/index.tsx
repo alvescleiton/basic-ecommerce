@@ -22,7 +22,12 @@ const CartItem = ({ product }: Props) => {
       </ProductImage>
       <Title>{product.title}</Title>
       <Quantity>{product.quantity}</Quantity>
-      <Price>${product.priceDiscount > 0 ? product.priceDiscount : product.price}</Price>
+      <Price>
+        R$
+        {product.priceDiscount > 0
+          ? product.priceDiscount.toLocaleString('pt-BR')
+          : product.price.toLocaleString('pt-BR')}
+      </Price>
       <Remove>
         <button onClick={handleRemoveButton}>X</button>
       </Remove>
