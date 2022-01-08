@@ -16,11 +16,13 @@ const rotate = keyframes`
 
 type CartContainerProps = {
   isAnimating: boolean
+  onClick: () => void
 }
 
 export const CartContainer = styled.div<CartContainerProps>`
   position: relative;
   height: 26px;
+  cursor: pointer;
 
   img {
     height: 26px;
@@ -46,4 +48,10 @@ export const NumberOfItems = styled.div`
   height: 17px;
   font-size: ${props => props.theme.fontSizes.extraSmall};
   border-radius: 50%;
+`
+
+export const EmptyCart = styled.div`
+  padding: 20px;
+  font-size: ${props => props.theme.fontSizes.large};
+  text-align: center;
 `
