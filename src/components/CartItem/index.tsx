@@ -2,7 +2,7 @@ import { useContext } from 'react'
 
 import { CartContext, CartProductsType } from '@/Hooks/CartHooks'
 
-import { ContainerCartItem, ProductImage, Title, Quantity, Price, Remove } from './styles'
+import * as S from './styles'
 
 type Props = {
   product: CartProductsType
@@ -16,22 +16,22 @@ const CartItem = ({ product }: Props) => {
   }
 
   return (
-    <ContainerCartItem>
-      <ProductImage>
+    <S.Container>
+      <S.ProductImage>
         <img src={product.image} alt={product.title} />
-      </ProductImage>
-      <Title>{product.title}</Title>
-      <Quantity>{product.quantity}</Quantity>
-      <Price>
+      </S.ProductImage>
+      <S.Title>{product.title}</S.Title>
+      <S.Quantity>{product.quantity}</S.Quantity>
+      <S.Price>
         $
         {product.priceDiscount > 0
           ? product.priceDiscount.toLocaleString('en-US')
           : product.price.toLocaleString('en-US')}
-      </Price>
-      <Remove>
+      </S.Price>
+      <S.Remove>
         <button onClick={handleRemoveButton}>X</button>
-      </Remove>
-    </ContainerCartItem>
+      </S.Remove>
+    </S.Container>
   )
 }
 

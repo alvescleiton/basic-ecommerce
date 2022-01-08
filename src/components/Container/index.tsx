@@ -1,4 +1,4 @@
-import { Element } from './styles'
+import * as S from './styles'
 
 type Props = {
   children: React.ReactNode
@@ -9,7 +9,7 @@ type Props = {
 }
 
 const Container = ({ children, ...rest }: Props) => {
-  return <Element {...rest}>{children}</Element>
+  return <S.Container {...rest}>{children}</S.Container>
 }
 
 export default Container

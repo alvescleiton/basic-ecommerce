@@ -5,7 +5,7 @@ import Router from 'next/router'
 import Modal from '@/Components/Modal'
 import { CartContext } from '@/Hooks/CartHooks'
 
-import { CartContainer, NumberOfItems, EmptyCart } from './styles'
+import * as S from './styles'
 
 const MiniCart = () => {
   const { products } = useContext(CartContext)
@@ -27,14 +27,14 @@ const MiniCart = () => {
 
   return (
     <>
-      <CartContainer isAnimating={isAnimating} onClick={() => (quantity > 0 ? Router.push('cart') : setIsOpen(true))}>
-        <NumberOfItems>{quantity}</NumberOfItems>
+      <S.Container isAnimating={isAnimating} onClick={() => (quantity > 0 ? Router.push('cart') : setIsOpen(true))}>
+        <S.NumberOfItems>{quantity}</S.NumberOfItems>
 
         <img src="/assets/img/cart.png" alt="Cart" />
-      </CartContainer>
+      </S.Container>
 
       <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
-        <EmptyCart>Your cart is empty =(</EmptyCart>
+        <S.EmptyCart>Your cart is empty =(</S.EmptyCart>
       </Modal>
     </>
   )

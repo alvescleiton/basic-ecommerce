@@ -14,12 +14,12 @@ const rotate = keyframes`
   }
 `
 
-type CartContainerProps = {
+type ContainerProps = {
   isAnimating: boolean
   onClick: () => void
 }
 
-export const CartContainer = styled.div<CartContainerProps>`
+export const Container = styled.div<ContainerProps>`
   position: relative;
   height: 26px;
   cursor: pointer;

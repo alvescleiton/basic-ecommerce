@@ -1,15 +1,15 @@
 import Link from 'next/link'
 
-import { ContainerLogo, Circle, Title } from './styles'
+import * as S from './styles'
 
 const Logo = () => {
   return (
     <Link href="/">
       <a>
-        <ContainerLogo>
-          <Circle>DS</Circle>
-          <Title>Dev Store</Title>
-        </ContainerLogo>
+        <S.ContainerLogo>
+          <S.Circle>DS</S.Circle>
+          <S.Title>Dev Store</S.Title>
+        </S.ContainerLogo>
       </a>
     </Link>
   )

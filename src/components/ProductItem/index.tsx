@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from 'react'
 
 import { CartContext } from '@/Hooks/CartHooks'
 
-import { Cart, Description, Details, Image, Price, ProductContainer, Title } from './styles'
+import * as S from './styles'
 
 import Container from '../Container'
 
@@ -32,17 +32,17 @@ const ProductItem = ({ product }: PropsType) => {
   }, [products])
 
   return (
-    <ProductContainer>
-      <Image>
+    <S.ProductContainer>
+      <S.Image>
         <img src={product.image} alt={product.title} />
-      </Image>
-      <Details>
+      </S.Image>
+      <S.Details>
         <Container>
-          <Title>{product.title}</Title>
-          <Description>{product.description}</Description>
+          <S.Title>{product.title}</S.Title>
+          <S.Description>{product.description}</S.Description>
         </Container>
         <Container display="flex" justifyContent="space-between">
-          <Price>
+          <S.Price>
             {product.priceDiscount ? (
               <>
                 <strong>${product.priceDiscount.toLocaleString('en-US')}</strong>
@@ -51,13 +51,13 @@ const ProductItem = ({ product }: PropsType) => {
             ) : (
               <strong>${product.price.toLocaleString('en-US')}</strong>
             )}
-          </Price>
-          <Cart onClick={addToCart} added={added}>
+          </S.Price>
+          <S.Cart onClick={addToCart} added={added}>
             {added ? 'in the cart' : 'add to cart +'}
-          </Cart>
+          </S.Cart>
         </Container>
-      </Details>
-    </ProductContainer>
+      </S.Details>
+    </S.ProductContainer>
   )
 }
 

@@ -4,10 +4,11 @@ import ProductItem from '..'
 
 import ProductData from '@/Services/productList.json'
 
-import { ContainerProductList } from './styles'
+import * as S from './styles'
 
 type ProductListProps = {
   id: number
+  image: string
   title: string
   description: string
   price: number
@@ -22,11 +23,11 @@ const ProductList = () => {
   }, [])
 
   return (
-    <ContainerProductList>
+    <S.ContainerProductList>
       {productList?.map(product => (
         <ProductItem key={product.id} product={product} />
       ))}
-    </ContainerProductList>
+    </S.ContainerProductList>
   )
 }
 

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import breakpoints from 'src/utils/breakpoints'
 
-export const ContainerCartItem = styled.tr``
+export const Container = styled.tr``
 
 export const ProductImage = styled.td`
   width: 40px;

@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from 'react'
 import CartItem from '@/Components/CartItem'
 import { CartContext } from '@/Hooks/CartHooks'
 
-import { Table, NoItems } from './styles'
+import * as S from './styles'
 
 const CartList = () => {
   const { products } = useContext(CartContext)
@@ -20,11 +20,11 @@ const CartList = () => {
   }, [products])
 
   if (!products.length) {
-    return <NoItems>Your cart is empty</NoItems>
+    return <S.NoItems>Your cart is empty</S.NoItems>
   }
 
   return (
-    <Table>
+    <S.Table>
       <thead>
         <tr>
           <th colSpan={2} align="left">
@@ -45,7 +45,7 @@ const CartList = () => {
           </td>
         </tr>
       </tbody>
-    </Table>
+    </S.Table>
   )
 }
 

@@ -9,7 +9,7 @@ type Props = {
   flexDirection?: string
 }
 
-export const Element = styled.div<Props>`
+export const Container = styled.div<Props>`
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
