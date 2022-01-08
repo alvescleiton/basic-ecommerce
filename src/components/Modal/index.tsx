@@ -23,7 +23,7 @@ const Modal = ({ children, isOpen, setIsOpen }: ModalProps) => {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
-  }, [])
+  }, [isOpen])
 
   return (
     <S.Background isOpen={isOpen}>
