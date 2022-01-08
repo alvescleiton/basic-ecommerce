@@ -41,5 +41,6 @@ export const Table = styled.table`
 export const NoItems = styled.p`
   display: block;
   text-align: center;
-  padding: 30px 10px;
+  padding: 60px 10px;
+  font-size: ${props => props.theme.fontSizes.large};
 `

@@ -20,7 +20,7 @@ const CartList = () => {
   }, [products])
 
   if (!products.length) {
-    return <S.NoItems>Your cart is empty</S.NoItems>
+    return <S.NoItems>Your cart is empty =(</S.NoItems>
   }
 
   return (
