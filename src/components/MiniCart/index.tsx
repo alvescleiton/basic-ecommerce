@@ -10,24 +10,24 @@ import { CartContainer, NumberOfItems, EmptyCart } from './styles'
 const MiniCart = () => {
   const { products } = useContext(CartContext)
   const [quantity, setQuantity] = useState(0)
-  const [isAnimatin, setIsAnimatin] = useState(false)
+  const [isAnimating, setIsAnimating] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
     const qtd = products.reduce((acc, cur) => acc + cur.quantity, 0)
 
-    setIsAnimatin(true)
+    setIsAnimating(true)
 
     setQuantity(qtd)
 
     setTimeout(() => {
-      setIsAnimatin(false)
+      setIsAnimating(false)
     }, 1000)
   }, [products])
 
   return (
     <>
-      <CartContainer isAnimating={isAnimatin} onClick={() => (quantity > 0 ? Router.push('cart') : setIsOpen(true))}>
+      <CartContainer isAnimating={isAnimating} onClick={() => (quantity > 0 ? Router.push('cart') : setIsOpen(true))}>
         <NumberOfItems>{quantity}</NumberOfItems>
 
         <img src="/assets/img/cart.png" alt="Cart" />
