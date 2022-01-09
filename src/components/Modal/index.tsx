@@ -27,7 +27,7 @@ const Modal = ({ children, isOpen, setIsOpen }: ModalProps) => {
   }, [isOpen])
 
   return (
-    process.browser &&
+    typeof window !== 'undefined' &&
     isOpen &&
     ReactDOM.createPortal(
       <S.Background isOpen={isOpen}>
