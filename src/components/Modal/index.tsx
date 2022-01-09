@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import ReactDOM from 'react-dom'
 
 import * as S from './styles'
 
@@ -26,9 +27,14 @@ const Modal = ({ children, isOpen, setIsOpen }: ModalProps) => {
   }, [isOpen])
 
   return (
-    <S.Background isOpen={isOpen}>
-      <S.Container ref={refModal}>{children}</S.Container>
-    </S.Background>
+    process.browser &&
+    isOpen &&
+    ReactDOM.createPortal(
+      <S.Background isOpen={isOpen}>
+        <S.Container ref={refModal}>{children}</S.Container>
+      </S.Background>,
+      document.getElementById('modal') as HTMLElement
+    )
   )
 }
 
