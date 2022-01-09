@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useContext, useState } from 'react'
 
 import { ProductType } from '@/Components/ProductItem'
 
@@ -21,7 +21,7 @@ type CartContextType = {
   children: React.ReactNode
 }
 
-export const CartContext = createContext<CreateContextType>({} as CreateContextType)
+const CartContext = createContext<CreateContextType>({} as CreateContextType)
 
 export const CartProvider = ({ children }: CartContextType) => {
   const [products, setProducts] = useState([])
@@ -48,4 +48,11 @@ export const CartProvider = ({ children }: CartContextType) => {
   }
 
   return <CartContext.Provider value={{ products, addProduct, removeProduct }}>{children}</CartContext.Provider>
+}
+
+export const useCart = () => {
+  const context = useContext(CartContext)
+  if (!context) throw new Error('useCart must be used within a CartProvider')
+  const { products, addProduct, removeProduct } = context
+  return { products, addProduct, removeProduct }
 }
