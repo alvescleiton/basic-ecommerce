@@ -1,14 +1,14 @@
-import { useContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import Router from 'next/router'
 
 import Modal from '@/Components/Modal'
-import { CartContext } from '@/Hooks/CartHooks'
+import { useCart } from '@/Hooks/CartHooks'
 
 import * as S from './styles'
 
 const MiniCart = () => {
-  const { products } = useContext(CartContext)
+  const { products } = useCart()
   const [quantity, setQuantity] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
   const [isOpen, setIsOpen] = useState(false)

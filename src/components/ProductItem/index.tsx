@@ -1,6 +1,6 @@
-import { useContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
-import { CartContext } from '@/Hooks/CartHooks'
+import { useCart } from '@/Hooks/CartHooks'
 
 import * as S from './styles'
 
@@ -21,7 +21,7 @@ type PropsType = {
 
 const ProductItem = ({ product }: PropsType) => {
   const [added, setAdded] = useState(false)
-  const { addProduct, products } = useContext(CartContext)
+  const { addProduct, products } = useCart()
 
   const addToCart = () => {
     addProduct(product)

@@ -1,12 +1,12 @@
-import { useContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import CartItem from '@/Components/CartItem'
-import { CartContext } from '@/Hooks/CartHooks'
+import { useCart } from '@/Hooks/CartHooks'
 
 import * as S from './styles'
 
 const CartList = () => {
-  const { products } = useContext(CartContext)
+  const { products } = useCart()
   const [total, setTotal] = useState(0)
 
   useEffect(() => {

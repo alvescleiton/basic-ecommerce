@@ -1,6 +1,4 @@
-import { useContext } from 'react'
-
-import { CartContext, CartProductsType } from '@/Hooks/CartHooks'
+import { CartProductsType, useCart } from '@/Hooks/CartHooks'
 
 import * as S from './styles'
 
@@ -9,7 +7,7 @@ type Props = {
 }
 
 const CartItem = ({ product }: Props) => {
-  const { removeProduct } = useContext(CartContext)
+  const { removeProduct } = useCart()
 
   const handleRemoveButton = () => {
     removeProduct(product.id)
