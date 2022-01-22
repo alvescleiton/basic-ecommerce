@@ -6,6 +6,16 @@ import ProductData from '@/Services/productList.json'
 
 import * as S from './styles'
 
+type ProductCompleteType = {
+  id: number
+  images: string[]
+  title: string
+  description: string
+  stock: number
+  price: number
+  priceDiscount: number
+}
+
 type ProductListProps = {
   id: number
   image: string
@@ -19,7 +29,18 @@ const ProductList = () => {
   const [productList, setProductList] = useState<ProductListProps[]>([])
 
   useEffect(() => {
-    setProductList(ProductData)
+    const product = ProductData.map((product: ProductCompleteType) => {
+      return {
+        id: product.id,
+        image: product.images[0],
+        title: product.title,
+        description: product.description,
+        price: product.price,
+        priceDiscount: product.priceDiscount,
+      }
+    })
+
+    setProductList(product)
   }, [])
 
   return (
