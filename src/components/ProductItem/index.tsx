@@ -39,7 +39,9 @@ const ProductItem = ({ product }: PropsType) => {
       <S.Details>
         <Container>
           <S.Title>{product.title}</S.Title>
-          <S.Description>{product.description}</S.Description>
+          <S.Description>
+            {product.description.length > 120 ? `${product.description.substring(0, 120)}...` : product.description}
+          </S.Description>
         </Container>
         <Container display="flex" justifyContent="space-between">
           <S.Price>
