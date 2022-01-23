@@ -21,10 +21,7 @@ const CartItem = ({ product }: Props) => {
       <S.Title>{product.title}</S.Title>
       <S.Quantity>{product.quantity}</S.Quantity>
       <S.Price>
-        $
-        {product.priceDiscount > 0
-          ? product.priceDiscount.toLocaleString('en-US')
-          : product.price.toLocaleString('en-US')}
+        ${product.priceFull > 0 ? product.priceFull.toLocaleString('en-US') : product.price.toLocaleString('en-US')}
       </S.Price>
       <S.Remove>
         <button onClick={handleRemoveButton}>X</button>

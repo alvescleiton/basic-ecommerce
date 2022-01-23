@@ -12,7 +12,7 @@ export type ProductType = {
   title: string
   description: string
   price: number
-  priceDiscount: number
+  priceFull: number
 }
 
 type PropsType = {
@@ -45,10 +45,10 @@ const ProductItem = ({ product }: PropsType) => {
         </Container>
         <Container display="flex" justifyContent="space-between">
           <S.Price>
-            {product.priceDiscount ? (
+            {product.priceFull ? (
               <>
-                <strong>${product.priceDiscount.toLocaleString('en-US')}</strong>
-                <sup>${product.price.toLocaleString('en-US')}</sup>
+                <strong>${product.price.toLocaleString('en-US')}</strong>
+                <sup>${product.priceFull.toLocaleString('en-US')}</sup>
               </>
             ) : (
               <strong>${product.price.toLocaleString('en-US')}</strong>

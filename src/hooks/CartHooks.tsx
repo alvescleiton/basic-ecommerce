@@ -7,7 +7,7 @@ export type CartProductsType = {
   image: string
   title: string
   price: number
-  priceDiscount?: number
+  priceFull?: number
   quantity: number
 }
 
@@ -32,7 +32,7 @@ export const CartProvider = ({ children }: CartContextType) => {
       image: product.image,
       title: product.title,
       price: product.price,
-      priceDiscount: product.priceDiscount,
+      priceFull: product.priceFull,
       quantity: 1,
     }
 

@@ -11,7 +11,7 @@ const CartList = () => {
 
   useEffect(() => {
     const total = products.reduce((acc, product) => {
-      const price = product.priceDiscount ? product.priceDiscount : product.price
+      const price = product.priceFull ? product.priceFull : product.price
 
       return acc + price * product.quantity
     }, 0)

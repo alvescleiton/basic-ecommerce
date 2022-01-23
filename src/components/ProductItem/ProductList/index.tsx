@@ -13,7 +13,7 @@ type ProductCompleteType = {
   description: string
   stock: number
   price: number
-  priceDiscount: number
+  priceFull: number
 }
 
 type ProductListProps = {
@@ -22,7 +22,7 @@ type ProductListProps = {
   title: string
   description: string
   price: number
-  priceDiscount: number
+  priceFull: number
 }
 
 const ProductList = () => {
@@ -36,7 +36,7 @@ const ProductList = () => {
         title: product.title,
         description: product.description,
         price: product.price,
-        priceDiscount: product.priceDiscount,
+        priceFull: product.priceFull,
       }
     })
 

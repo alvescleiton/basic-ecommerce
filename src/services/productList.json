@@ -11,7 +11,7 @@
     "description": "This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description",
     "stock": 10,
     "price": 5000,
-    "priceDiscount": 4000
+    "priceFull": 6000
   },
   {
     "id": 2,
@@ -25,7 +25,7 @@
     "description": "This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description",
     "stock": 6,
     "price": 6500,
-    "priceDiscount": 5500
+    "priceFull": 0
   },
   {
     "id": 3,
@@ -39,7 +39,7 @@
     "description": "This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description",
     "stock": 52,
     "price": 4200,
-    "priceDiscount": 0
+    "priceFull": 0
   },
   {
     "id": 4,
@@ -53,7 +53,7 @@
     "description": "This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description",
     "stock": 21,
     "price": 3750,
-    "priceDiscount": 0
+    "priceFull": 0
   },
   {
     "id": 5,
@@ -66,8 +66,8 @@
     "title": "Notebook 5",
     "description": "This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description",
     "stock": 13,
-    "price": 8450,
-    "priceDiscount": 6980
+    "price": 6450,
+    "priceFull": 8980
   },
   {
     "id": 6,
@@ -81,7 +81,7 @@
     "description": "This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description",
     "stock": 27,
     "price": 4580,
-    "priceDiscount": 0
+    "priceFull": 0
   },
   {
     "id": 7,
@@ -95,7 +95,7 @@
     "description": "This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description",
     "stock": 11,
     "price": 5850,
-    "priceDiscount": 5600
+    "priceFull": 7600
   },
   {
     "id": 8,
@@ -109,6 +109,6 @@
     "description": "This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description. This is a notebook description",
     "stock": 23,
     "price": 5600,
-    "priceDiscount": 0
+    "priceFull": 0
   }
 ]
